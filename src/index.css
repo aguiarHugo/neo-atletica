@@ -13,3 +13,18 @@ body,
   font-family: "DM Sans", sans-serif;
   @apply text-red-500
 }
+
+.menu-slideFromTop {
+  animation: slideFromTop 0.5s ease-out forwards
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
