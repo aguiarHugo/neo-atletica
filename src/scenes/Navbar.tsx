@@ -19,11 +19,11 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
   const navbarBackground = isTopOfPage ? 'bg-dark-100' : 'bg-yellow-400 drop-shadow'
 
   return (
-    <nav className='max-h-[70px]'>
+    <nav>
       <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
         <div className={`${flexBetween} mx-auto w-full px-16`}>
           <div className={`${flexBetween} w-full`}>
-            <img className='w-24' src={Logo} alt="Logo" />
+            <img className='w-16' src={Logo} alt="Logo" />
           </div>
           
           {isAboveMediumScreens ? (
