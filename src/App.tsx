@@ -1,5 +1,7 @@
 import Navbar from '@/scenes/Navbar'
 import Home from '@/scenes/Home'
+import Benefits from '@/scenes/Benefits'
+import Classes from '@/scenes/Classes'
 
 import { useEffect, useState } from 'react'
 import { SelectedPage } from '@/shared/types'
@@ -27,10 +29,10 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div id='home' className=' py-12' />
-      <Home
-        setSelectedPage={setSelectedPage}
-      />
+      <Home setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
+      <Classes setSelectedPage={setSelectedPage} />
+     
     </section>
   )
 }
