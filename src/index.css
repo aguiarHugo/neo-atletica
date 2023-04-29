@@ -11,7 +11,15 @@ body,
   height: 100%;
   width: 100%;
   font-family: "DM Sans", sans-serif;
-  @apply text-red-500
+  @apply text-dark-400
+}
+
+.gps-icon {
+  transition: .5s;
+}
+
+.gps-icon:hover {
+  color: red;
 }
 
 .menu-slideFromTop {
