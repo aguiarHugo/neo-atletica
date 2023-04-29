@@ -73,7 +73,10 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
               <XMarkIcon className='h-7 w-7 text-red-400 '/>
             </button>
           </div>
-          <div className='flex flex-col items-center gap-12 text-xl'>
+          <div 
+            className='flex flex-col items-center gap-12 text-xl'
+            onClick={() => setMenuToggle(!menuToggle)} 
+          >
               <Link 
                 page='Home'
                 selectedPage={selectedPage}
