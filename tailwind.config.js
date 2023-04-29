@@ -37,6 +37,12 @@ export default {
           800: "#070708",
           900: "#040404"
         },
+        green: {
+          100: "#25D366"
+        },
+        purple: {
+          100: " #833AB4"
+        }
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
@@ -48,7 +54,6 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
-        evolvetext: "url('./assets/EvolveText.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
