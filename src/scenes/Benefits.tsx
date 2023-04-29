@@ -2,6 +2,7 @@ import HeadText from '@/components/HeadText'
 import { BenefitType, SelectedPage } from '@/shared/types'
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
+import useMediaQuery from '@/hooks/useMediaQuery'
 import Benefit from '@/components/Benefit'
 
 
@@ -39,6 +40,10 @@ type Props = {
 }
 
 const Benefits = ({ setSelectedPage}: Props) => {
+  const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
+  const amount = isAboveMediumScreens ? 0.5 : 0.2
+
+
   return (
     <section id='benefícios' className='mx-auto min-h-full w-5/6 pt-28 md:pt-24'>
       <motion.div
@@ -65,7 +70,7 @@ const Benefits = ({ setSelectedPage}: Props) => {
           className="mt-5 items-center justify-between gap-8 md:flex"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount }}
           variants={container}
         >
           {benefits.map((benefit: BenefitType) => (
