@@ -23,16 +23,17 @@ body,
 }
 
 .scroll::-webkit-scrollbar {
-  width: 8px;             
+  width: 8px;
+  height: 8px;         
 }
 
 .scroll::-webkit-scrollbar-track {
-  background:#ffc837;        
+  background:#F8F8FF; 
 }
 
 .scroll::-webkit-scrollbar-thumb {
   background-color: #F8F8FF;    
-  border-radius: 20px;       
+  border-radius: 8px;       
   border: 2px solid #e8e512;  
 }
 
