@@ -54,7 +54,7 @@ type Props = {
 
 const Classes = ({ setSelectedPage }: Props) => {
   return (
-    <section id="aulas" className=" mw-full py-40">
+    <section id="aulas" className=" mw-full py-16 md:py-28">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Aulas)}
       >
@@ -72,10 +72,11 @@ const Classes = ({ setSelectedPage }: Props) => {
           <div className="md:w-full md:text-center">
             <HeadText>AULAS</HeadText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+            Oferecemos uma variedade de aulas que são adequadas para 
+            qualquer nível de condicionamento físico. Temos aulas de artes marciais, 
+            como judô, jiu-jitsu e capoeira, que são ótimas para aprimorar a técnica, 
+            aumentar a força e melhorar a flexibilidade. Também oferecemos aulas de dança, incluindo zumba e outras, que são divertidas e energizantes, além de serem uma ótima maneira de queimar calorias. Além disso, oferecemos aulas de treinamento funcional e de musculação, projetadas para ajudar a construir músculos e melhorar a resistência. Seja qual for o seu objetivo, 
+            temos uma aula perfeita para você!
             </p>
           </div>
         </motion.div>

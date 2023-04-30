@@ -35,9 +35,6 @@ const Home = ({ setSelectedPage}: Props) => {
           >
             <h1 className="text-4xl font-bold text-dark-400 font-montserrat md:text-7xl">NEO <span className='text-red-400'>Atlética</span></h1>
             <h3 className="text-2xl font-montserrat text-center">Academia</h3>
-            <a href='https://www.google.com/maps/dir/-22.4184911,-42.9735495/R.+Jos%C3%A9+C%C3%A2ndido+de+Almeida,+31+-+Ch%C3%A1cara+Para%C3%ADso,+Nova+Friburgo+-+RJ,+28605-310/@-22.2401786,-43.0210498,10z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x978acdbf960893:0x4fb3524a829e6af2!2m2!1d-42.5229077!2d-22.2627752' target='__blank' className='mt-4 flex mx-auto justify-center gap-2 md:items-center'>
-              <HiOutlineLocationMarker className='gps-icon' size={28} />Rua José Candido de Almeida, 31, Chácara do Paraíso.
-            </a>
             <SocialMedia />
           </motion.div>
         </div>
