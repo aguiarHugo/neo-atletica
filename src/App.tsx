@@ -2,6 +2,7 @@ import Navbar from '@/scenes/Navbar'
 import Home from '@/scenes/Home'
 import Benefits from '@/scenes/Benefits'
 import Classes from '@/scenes/Classes'
+import Footer from '@/scenes/Footer'
 
 import { useEffect, useState } from 'react'
 import { SelectedPage } from '@/shared/types'
@@ -32,7 +33,8 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <Classes setSelectedPage={setSelectedPage} />
-     
+      <Footer setSelectedPage={setSelectedPage} />
+
     </section>
   )
 }
