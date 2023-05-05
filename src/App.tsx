@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <section className="app bg-dark-100">
+    <section className="app">
       <Navbar 
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -34,7 +34,6 @@ function App() {
       <Benefits setSelectedPage={setSelectedPage} />
       <Classes setSelectedPage={setSelectedPage} />
       <Footer setSelectedPage={setSelectedPage} />
-
     </section>
   )
 }

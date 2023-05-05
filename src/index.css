@@ -11,7 +11,7 @@ body,
   height: 100%;
   width: 100%;
   font-family: "DM Sans", sans-serif;
-  @apply text-dark-400
+  @apply text-dark-400 bg-dark-100
 }
 
 .gps-icon {
