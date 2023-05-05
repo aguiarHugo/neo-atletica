@@ -46,7 +46,7 @@ export default {
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
+        'linear-gradient(132deg, rgba(232,229,18,1) 37%, rgba(235,29,36,1) 100%)',
         "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
       fontFamily: {

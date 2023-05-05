@@ -90,7 +90,7 @@ const Classes = ({ setSelectedPage }: Props) => {
           }}
         >
           <div className="md:w-full md:text-center">
-            <HeadText>Classes</HeadText>
+            <HeadText>AULAS</HeadText>
             <p className="py-5">
             Oferecemos uma variedade de Classes que são adequadas para 
             qualquer nível de condicionamento físico. Temos Classes de artes marciais, 
