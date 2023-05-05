@@ -1,4 +1,13 @@
 import { SelectedPage, ClassType } from "@/shared/types";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+import useMediaQuery from "@/hooks/useMediaQuery";
+
 import image1 from "@/assets/image1.png";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
@@ -53,12 +62,23 @@ type Props = {
 };
 
 const Classes = ({ setSelectedPage }: Props) => {
+  const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
+  const isAboveSmallScreens = useMediaQuery('(min-width: 768px)');
+
+  let slidesPerView = 1;
+  if (isAboveSmallScreens) {
+    slidesPerView = 2;
+  }
+  if (isAboveMediumScreens) {
+    slidesPerView = 3;
+  }
+
   return (
-    <section id="aulas" className=" mw-full py-28 md:py-28">
+    <section id="aulas" className="py-28">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.Aulas)}
       >
         <motion.div
+          onViewportEnter={() => setSelectedPage(SelectedPage.Aulas)}
           className="mx-auto w-5/6"
           initial="hidden"
           whileInView="visible"
@@ -70,28 +90,34 @@ const Classes = ({ setSelectedPage }: Props) => {
           }}
         >
           <div className="md:w-full md:text-center">
-            <HeadText>AULAS</HeadText>
+            <HeadText>Classes</HeadText>
             <p className="py-5">
-            Oferecemos uma variedade de aulas que são adequadas para 
-            qualquer nível de condicionamento físico. Temos aulas de artes marciais, 
+            Oferecemos uma variedade de Classes que são adequadas para 
+            qualquer nível de condicionamento físico. Temos Classes de artes marciais, 
             como judô, jiu-jitsu e capoeira, que são ótimas para aprimorar a técnica, 
-            aumentar a força e melhorar a flexibilidade. Também oferecemos aulas de dança, incluindo zumba e outras, que são divertidas e energizantes, além de serem uma ótima maneira de queimar calorias. Além disso, oferecemos aulas de treinamento funcional e de musculação, projetadas para ajudar a construir músculos e melhorar a resistência. Seja qual for o seu objetivo, 
+            aumentar a força e melhorar a flexibilidade. Também oferecemos Classes de dança, incluindo zumba e outras, que são divertidas e energizantes, além de serem uma ótima maneira de queimar calorias. Além disso, oferecemos Classes de treinamento funcional e de musculação, projetadas para ajudar a construir músculos e melhorar a resistência. Seja qual for o seu objetivo, 
             temos uma aula perfeita para você!
             </p>
           </div>
         </motion.div>
-        <div className="mt-10 h-[353px] w-full scroll overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
-            {classes.map((item: ClassType, index) => (
-              <Class
-                key={`${item.name}-${index}`}
-                name={item.name}
-                description={item.description}
-                image={item.image}
-              />
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={100}
+          slidesPerView={slidesPerView}
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          {classes.map((item: ClassType, index) => (
+          <SwiperSlide key={`${item.name}-${index}`}>
+            <Class
+              name={item.name}
+              description={item.description}
+              image={item.image}
+            />
+            </SwiperSlide>
             ))}
-          </ul>
-        </div>
+        </Swiper>
       </motion.div>
     </section>
   );

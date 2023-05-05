@@ -41,6 +41,10 @@ body,
   animation: slideFromTop 0.5s ease-out forwards
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #e8e512 !important;
+}
+
 @keyframes slideFromTop {
   0% {
     transform: translateY(-100%);

@@ -6,6 +6,7 @@ import Footer from '@/scenes/Footer'
 
 import { useEffect, useState } from 'react'
 import { SelectedPage } from '@/shared/types'
+import Aulas from './scenes/Aulas'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
